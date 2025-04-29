@@ -63,7 +63,7 @@ Provides instructions for creating an Ollama Modelfile and running the model loc
 
 Colab : https://colab.research.google.com/drive/1MFptlFXvugWQuRuiYhjc5FsjEu_D0bAc
 
-Youtube  : 
+Youtube  : https://youtu.be/sVaCtYlZQ_w
 
 # Models Demonstrated
 
