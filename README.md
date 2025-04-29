@@ -1,77 +1,80 @@
 # LLM-Finetuning-and-Pretraining-with-Unsloth-AI
 
- YouTube Video : https://youtu.be/BzHiRIftatg
- 
-Part A: Finetuning
+# Project Overview
 
-Llama 3.1 (8B) – Fine-tuning for a coding task
+This repository contains code, Colab notebooks, and video tutorials demonstrating various techniques for fine-tuning, aligning, and deploying large language models (LLMs) using the Unsloth library for high-performance training.
 
- Colab Link : https://colab.research.google.com/drive/1al-TLtee8AJ6GI4S-86_hv1pcXsETGd8
- 
-Mistral NeMo (12B) – Fine-tuning for a chat task
+The project covers the following key workflows (corresponding to assignment parts A-G):
 
-Colab Link : https://colab.research.google.com/drive/1-xoR0PMSSxwTdWx6dk-FT_OJJEpDYBa-
+A: Fine-tuning open-weight LLMs for specific tasks (e.g., coding instruction following with Llama 3.1).
 
-Gemma 2 (9B) – Fine-tuning for a conversational AI task
+Efficient Fine-tuning using QLoRA adapters with Unsloth optimizations.
+Uses 4-bit quantization for significant memory reduction.
+Demonstrated instruction following for coding tasks with Llama 3.1.
 
- Colab Link: https://colab.research.google.com/drive/1KEi4GGS8CdwMw9YjR3oB6VbUo8FZb3un
+Colab : https://colab.research.google.com/drive/1n0b6kpqQadta9A8ORhJr7JEgdO05gY_b
 
-Phi-3.5 (mini) – Fine-tuning for a reasoning task
+B: Continued pretraining to adapt models to new languages (e.g., teaching TinyLlama Hindi).
 
- Colab Link: https://colab.research.google.com/drive/1-xoR0PMSSxwTdWx6dk-FT_OJJEpDYBa-
+Adapting LLMs to New Languages by continued pretraining on raw text corpora (e.g., Hindi).
+Improves vocabulary and pattern recognition for the target language (demonstrated with TinyLlama).
 
-Part B: Continued Pretraining
+Colab : https://colab.research.google.com/drive/15FAnxvHmE_1R9xXzmzoKHnpihtZVLEnI
 
-Colab Link: https://colab.research.google.com/drive/1al-TLtee8AJ6GI4S-86_hv1pcXsETGd8
- 
-Part C: Chat Templates
+C: Advanced Chat Template Applications including classification, conversational chat, extending TinyLlama's context window, and fine-tuning on multiple datasets simultaneously.
 
-Classification Chat – Build a chatbot that can classify user input into predefined categories.
+Utilizing chat templates for various tasks beyond simple conversation:
+Framing Classification as an instruction task.
+Handling multi-turn Conversational Chat.
+Extending Max Context Size for models like TinyLlama using Unsloth's features.
+Combining Multiple Datasets (e.g., chat and code) into a single fine-tuning run.
 
-Colab Link: https://colab.research.google.com/drive/1-xoR0PMSSxwTdWx6dk-FT_OJJEpDYBa-
- 
-Conversational Chat – Develop a chatbot for natural, multi-turn conversations.
+Colab : https://colab.research.google.com/drive/1BAjHqerVKCKSJTYh9wqK6UguhTVG_jst
 
-Colab Link:  https://colab.research.google.com/drive/1KEi4GGS8CdwMw9YjR3oB6VbUo8FZb3un
- 
+D: Reward modeling using ORPO and DPO for preference alignment (using Phi-3 Mini).
 
-Context Extension with TinyLlama – Extend the context size of TinyLlama for handling long conversations or documents.
+Aligning model preferences using state-of-the-art techniques:
+DPO (Direct Preference Optimization) using preference pairs.
+ORPO (Odds Ratio Preference Optimization) combining LM loss with preference optimization.
+Demonstrated with Phi-3 Mini on the Ultrafeedback dataset.
 
-Colab Link: https://colab.research.google.com/drive/1al-TLtee8AJ6GI4S-86_hv1pcXsETGd8
+Colab : https://colab.research.google.com/drive/1-QmKcGToSHrGngXwd6RYFL3qZd07s3qI
 
-Multi-dataset Single Finetuning – Finetune on multiple datasets simultaneously for enhanced versatility.
+E: Continued fine-tuning starting from previously saved custom LoRA checkpoints.
 
-Colab Link: https://colab.research.google.com/drive/1-xoR0PMSSxwTdWx6dk-FT_OJJEpDYBa-
- 
-Part D: Reward Modeling
+Loading previously saved LoRA adapter checkpoints.
+Continuing the fine-tuning process, allowing for iterative improvement or adaptation.
 
-ORPO (Online Reward Policy Optimization) – Optimize responses in real-time based on user feedback.
+Colab : https://colab.research.google.com/drive/11D6_y7nNWKo8Z7-9g9Q_teU9O2sdgaKK
 
-Colab Link:  https://colab.research.google.com/drive/1KEi4GGS8CdwMw9YjR3oB6VbUo8FZb3un
+F: Mental health chatbot development via fine-tuning Phi-3 Mini, with important ethical considerations.
 
+Fine-tuning Phi-3 Mini on the Amod/mental_health_counseling_conversations dataset.
+Focuses on generating empathetic and supportive responses.
+Includes critical ethical considerations and disclaimers in the system prompt.
 
-DPO (Direct Preference Optimization) – Optimize for direct user preferences to enhance response quality.
+Colab : https://colab.research.google.com/drive/1r5zoJPu8Qc6u7Tt1g-PFcDsyfBKO9WGy
 
-Colab Link:  https://colab.research.google.com/drive/1al-TLtee8AJ6GI4S-86_hv1pcXsETGd8
- 
-Part E: Continued Fine-Tuning from a Custom Checkpoint
+G: Model export to GGUF format for local inference with Ollama.
 
-Finetune from a custom checkpoint using Unsloth AI.
+Merging fine-tuned LoRA adapters into the base model.
+Exporting the merged model to GGUF format using Unsloth's save_pretrained_gguf.
+Provides instructions for creating an Ollama Modelfile and running the model locally.
 
-Colab Link: https://colab.research.google.com/drive/1-xoR0PMSSxwTdWx6dk-FT_OJJEpDYBa-
+Colab : https://colab.research.google.com/drive/1MFptlFXvugWQuRuiYhjc5FsjEu_D0bAc
 
+Youtube  : 
 
-Part F: Mental Health Development Chatbot
+# Models Demonstrated
 
-Finetune Phi-3 using Unsloth AI to create a mental health chatbot.
+This project primarily demonstrates techniques using the following models fine-tuned with Unsloth:
 
-Colab Link:  https://colab.research.google.com/drive/1KEi4GGS8CdwMw9YjR3oB6VbUo8FZb3un
+Llama 3 / Llama 3.1 (8B): Used for instruction fine-tuning (Part A) and export to Ollama (Part G). Known for strong general language capabilities.
 
- 
-Part G: Export to Ollama
+TinyLlama (1.1B): Used for continued pretraining (Part B), advanced chat template examples (Part C), and continued fine-tuning from checkpoints (Part E) due to its small size and speed.
 
-Finetune a model using Unsloth AI and export it to Ollama for efficient inference.
+Phi-3 Mini (3.8B): Used for reward modeling (DPO/ORPO, Part D) and the mental health chatbot (Part F) because of its balance between capability and efficiency.
 
-Colab Link:  https://colab.research.google.com/drive/1al-TLtee8AJ6GI4S-86_hv1pcXsETGd8
+Note: The techniques shown (fine-tuning, LoRA, DPO, ORPO, export) can often be applied to other compatible models listed in the Unsloth documentation with appropriate adjustments.
 
  
