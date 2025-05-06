@@ -4,9 +4,9 @@
 
 This repository contains code, Colab notebooks, and video tutorials demonstrating various techniques for fine-tuning, aligning, and deploying large language models (LLMs) using the Unsloth library for high-performance training.
 
-The project covers the following key workflows (corresponding to assignment parts A-G):
 
-A: Fine-tuning open-weight LLMs for specific tasks (e.g., coding instruction following with Llama 3.1).
+
+A: Fine-tuning open-weight LLMs for specific tasks 
 
 Efficient Fine-tuning using QLoRA adapters with Unsloth optimizations.
 Uses 4-bit quantization for significant memory reduction.
@@ -14,10 +14,10 @@ Demonstrated instruction following for coding tasks with Llama 3.1.
 
 Colab : https://colab.research.google.com/drive/1n0b6kpqQadta9A8ORhJr7JEgdO05gY_b
 
-B: Continued pretraining to adapt models to new languages (e.g., teaching TinyLlama Hindi).
+B: Continued pretraining to adapt models to new languages .
 
-Adapting LLMs to New Languages by continued pretraining on raw text corpora (e.g., Hindi).
-Improves vocabulary and pattern recognition for the target language (demonstrated with TinyLlama).
+Adapting LLMs to New Languages by continued pretraining on raw text corpora.
+Improves vocabulary and pattern recognition for the target language .
 
 Colab : https://colab.research.google.com/drive/15FAnxvHmE_1R9xXzmzoKHnpihtZVLEnI
 
@@ -27,11 +27,11 @@ Utilizing chat templates for various tasks beyond simple conversation:
 Framing Classification as an instruction task.
 Handling multi-turn Conversational Chat.
 Extending Max Context Size for models like TinyLlama using Unsloth's features.
-Combining Multiple Datasets (e.g., chat and code) into a single fine-tuning run.
+Combining Multiple Datasets  into a single fine-tuning run.
 
 Colab : https://colab.research.google.com/drive/1BAjHqerVKCKSJTYh9wqK6UguhTVG_jst
 
-D: Reward modeling using ORPO and DPO for preference alignment (using Phi-3 Mini).
+D: Reward modeling using ORPO and DPO for preference alignment .
 
 Aligning model preferences using state-of-the-art techniques:
 DPO (Direct Preference Optimization) using preference pairs.
